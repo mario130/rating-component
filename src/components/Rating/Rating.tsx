@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
+import { Link } from "react-router-dom";
 
-type RatingProps = {
+export type RatingProps = {
 	rating?: number
 }
 
@@ -38,9 +39,14 @@ export default class Rating extends Component<RatingProps> {
 					}
 				</div>
 				{/* submit button */}
-				<button
-					className='bg-primary hover:bg-white hover:text-primary transition-all rounded-full w-full font-semibold tracking-widest  p-3 my-2'
-				>Submit</button>
+				<Link to={'/submitted'}>
+					<button
+						disabled={this.state.rating == 0}
+						className={`${this.state.rating === 0 ? "bg-gray-800 text-gray-600" : "bg-primary hover:bg-white hover:text-primary"}   transition-all rounded-full w-full font-semibold tracking-widest  p-3 my-2`}
+					>
+						Submit
+					</button>
+				</Link>
 			</div>
 		)
 	}
