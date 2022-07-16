@@ -30,7 +30,7 @@ it('Rating buttons are working', () => {
 it('Initial rating is working', () => {
 	render(
 		<MemoryRouter>
-			<Rating rating={4} />
+			<Rating />
 		</MemoryRouter>
 	);
 
