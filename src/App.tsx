@@ -1,16 +1,11 @@
-import React from 'react';
-import logo from './logo.svg';
+import { Provider } from 'react-redux';
 import './App.css';
+import { store } from './app/store';
 import Rating from './components/Rating/Rating';
 import Submitted from './components/Submitted/Submitted';
-import { Provider } from 'react-redux'
-import { store } from './app/store'
 
 import {
-	BrowserRouter as Router,
-	Routes,
-	Route,
-	Navigate
+	BrowserRouter as Router, Navigate, Route, Routes
 } from "react-router-dom";
 
 function App() {

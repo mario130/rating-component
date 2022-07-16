@@ -1,10 +1,6 @@
-import React, { Component, useEffect } from 'react'
-import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import { Link, Navigate } from "react-router-dom";
-import { setRating } from '../../app/ratingSlice';
 import { RootState } from '../../app/store';
-import { RatingProps } from '../Rating/Rating';
 
 export default function Submitted() {
 	const rating = useSelector((state: RootState) => state.rating.rating);
