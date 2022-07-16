@@ -1,14 +1,18 @@
-import React, { Component } from 'react'
+import React, { Component, useEffect } from 'react'
+import { useDispatch } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { Link, Navigate } from "react-router-dom";
+import { setRating } from '../../app/ratingSlice';
+import { RootState } from '../../app/store';
 import { RatingProps } from '../Rating/Rating';
 
-export default class Submitted extends Component<RatingProps> {
-	state: Readonly<RatingProps> = {
-		rating: this.props.rating || 0
-	}
+export default function Submitted() {
+	const rating = useSelector((state: RootState) => state.rating.rating);
 
-	render() {
-		return (
+	return (
+		rating === 0 ?
+			<Navigate to={'/'} />
+			:
 			<div className='m-auto bg-secondary rounded-2xl p-6 max-w-sm text-white flex items-center flex-col'>
 				<img
 					className='mt-2'
@@ -18,7 +22,7 @@ export default class Submitted extends Component<RatingProps> {
 				/>
 
 				<div className='mt-6 mb-4 px-4 py-2 bg-gray-700 rounded-full text-orange-400 text-sm'>
-					You selected {this.props.rating} out of 5
+					You selected {rating} out of 5
 				</div>
 
 				<h1 className='text-2xl font-semibold my-4'>Thank you!</h1>
@@ -34,6 +38,5 @@ export default class Submitted extends Component<RatingProps> {
 					</button>
 				</Link>
 			</div>
-		)
-	}
+	)
 }

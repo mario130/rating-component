@@ -7,7 +7,7 @@ import { MemoryRouter } from 'react-router-dom';
 it('Back button is present', () => {
 	render(
 		<MemoryRouter>
-			<Submitted rating={3} />
+			<Submitted />
 		</MemoryRouter>
 	);
 
