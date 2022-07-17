@@ -8,7 +8,7 @@ const initialState: RatingState = {
 	rating: 0,
 }
 
-export const counterSlice = createSlice({
+export const ratingSlice = createSlice({
 	name: 'counter',
 	initialState,
 	reducers: {
@@ -18,6 +18,6 @@ export const counterSlice = createSlice({
 	},
 })
 
-export const { setRating } = counterSlice.actions
+export const { setRating } = ratingSlice.actions
 
-export default counterSlice.reducer
+export default ratingSlice.reducer
