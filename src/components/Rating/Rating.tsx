@@ -34,7 +34,7 @@ export default function Rating() {
 							key={el}
 							onClick={() => onChangeRating(el)}
 							value={el}
-							className={`${rating == el ? 'bg-primary text-white' : 'bg-gray-700 hover:bg-gray-500 text-gray-300'}  active:bg-primary active:text-white transition-all rounded-full  w-12 h-12 p-2 space-x-2`}
+							className={`${rating === el ? 'bg-primary text-white' : 'bg-gray-700 hover:bg-gray-500 text-gray-300'}  active:bg-primary active:text-white transition-all rounded-full  w-12 h-12 p-2 space-x-2`}
 						>{el}
 						</button>
 					)
@@ -43,7 +43,7 @@ export default function Rating() {
 			{/* submit button */}
 			<Link to={'/rating-component/submitted'}>
 				<button
-					disabled={rating == 0}
+					disabled={rating === 0}
 					className={`${rating === 0 ? "bg-gray-800 text-gray-600" : "bg-primary hover:bg-white hover:text-primary"}   transition-all rounded-full w-full font-semibold tracking-widest  p-3 my-2`}
 				>
 					Submit
