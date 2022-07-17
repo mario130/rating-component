@@ -7,7 +7,7 @@ export default function Submitted() {
 
 	return (
 		rating === 0 ?
-			<Navigate to={'/'} />
+			<Navigate to={'/rating-component/'} />
 			:
 			<div className='m-auto bg-secondary rounded-2xl p-6 max-w-sm text-white flex items-center flex-col'>
 				<img
