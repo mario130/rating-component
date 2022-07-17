@@ -20,7 +20,7 @@ export default function Rating() {
 			<div className='bg-gray-700 rounded-3xl w-fit p-4'>
 				<img
 					width="16"
-					src="/images/icon-star.svg"
+					src="/rating-component/images/icon-star.svg"
 					alt="star icon"
 				/>
 			</div>
@@ -41,7 +41,7 @@ export default function Rating() {
 				}
 			</div>
 			{/* submit button */}
-			<Link to={'/submitted'}>
+			<Link to={'/rating-component/submitted'}>
 				<button
 					disabled={rating == 0}
 					className={`${rating === 0 ? "bg-gray-800 text-gray-600" : "bg-primary hover:bg-white hover:text-primary"}   transition-all rounded-full w-full font-semibold tracking-widest  p-3 my-2`}

@@ -14,9 +14,9 @@ function App() {
 			<Router>
 				<div className="App bg-black h-screen flex align-middle">
 					<Routes>
-						<Route path='/submitted' element={<Submitted />} />
-						<Route path='/' element={<Rating />} />
-						<Route path='/*' element={<Navigate to={'/'} />} />
+						<Route path='/rating-component/submitted' element={<Submitted />} />
+						<Route path='/rating-component/' element={<Rating />} />
+						<Route path='/rating-component/*' element={<Navigate to={'/rating-component/'} />} />
 					</Routes>
 				</div>
 			</Router>

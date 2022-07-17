@@ -13,7 +13,7 @@ export default function Submitted() {
 				<img
 					className='mt-2'
 					width="140"
-					src="/images/illustration-thank-you.svg"
+					src="/rating-component/images/illustration-thank-you.svg"
 					alt="star icon"
 				/>
 
@@ -26,7 +26,7 @@ export default function Submitted() {
 					We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!
 				</p>
 				{/* submit button */}
-				<Link to={'/'} className='w-full'>
+				<Link to={'/rating-component/'} className='w-full'>
 					<button
 						className={` bg-primary hover:bg-white hover:text-primary transition-all rounded-full w-full font-semibold tracking-widest  p-3 my-2 mt-8`}
 					>
